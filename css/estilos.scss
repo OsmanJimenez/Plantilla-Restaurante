@@ -1,0 +1,312 @@
+body{
+    font-family: 'Baloo Bhaina', cursive;
+    font-size: 16px;
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+// Header
+
+header{
+    width: 100%;
+    background:url('../img/bg.jpg') #281a02;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center 0;
+    .contenedor{
+        position: relative;
+        height: 700px;
+    }
+    .menu{
+        width: 100%;
+        text-align: right;
+        a{
+            color: #fff;
+            font-size: 20px;
+            display: inline-block;
+            margin: 40px 20px;
+            text-decoration: none;
+            position: relative;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    .textos{
+        width: 100%;
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        margin-top: -52px;
+        .nombre{
+            font-size: 50px;
+            span{
+                font-size: 40px;
+            }
+        }
+        h3{
+            font-size: 25px;
+        }
+    }
+}
+
+//Main
+
+.main{
+    .acerca-de{
+        .contenedor{
+            overflow: visible;
+            position: relative;
+        }
+        .foto{
+            width: 80%;
+            position: absolute;
+            left: 0;
+            top: -50px;
+            z-index: 0;
+            box-shadow: 0px 0px 15px rgba($color: #000000, $alpha: .35);
+            border-radius: 4px;
+            img{
+                vertical-align: top;
+                width: 100%;
+                border-radius: 4px;
+            }
+        }
+        article{
+            background: #fff;
+            padding: 40px;
+            width: 50%;
+            top: 750px;
+            position: relative;
+            top: 300;
+            z-index: 1;
+            float: right;
+            box-shadow: 0px 0px 15px rgba($color: #000000, $alpha: .35);
+            border-radius: 4px;
+            h3{
+                font-size: 50px;
+                margin-bottom: 40px;
+            }
+            p{
+                line-height: 28px;
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    .menu{
+        padding-top: 570px;
+        margin-bottom: 50px;
+        .titulo{
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .contenedor-menu, .contenedor-menu2{
+            border: 1px solid #000;
+            background: transparent;
+            padding: 10px;
+            overflow: hidden;
+        } 
+        article{
+            width: 45%;
+            float: left;
+            padding: 20px;
+        }
+        .categoria{
+            font-size: 22px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .platillo{
+            margin-bottom: 30px;
+            padding: 20px;
+            border-bottom: 4px dotted #000;
+            overflow: hidden;
+        }
+        .nombre{
+            font-size: 20px;
+            margin-bottom: 15px;
+            float: left;
+        }
+        .precio{
+            font-size: 20px;
+            margin-bottom: 15px;
+            float: right;
+        }
+        .descripcion{
+          font-size: 16px;
+          color: #676767;
+          clear: both;      
+        }
+    }
+    .galeria{
+        overflow: hidden;
+        .foto{
+            width: 33.33%;
+            float: left;
+            img{
+                min-height: 350px;
+                width: 100%;
+                vertical-align: top;
+                opacity: .7;
+                &:hover{
+                    opacity: 1;;
+                }
+            }
+        }
+    }
+    .ubicacion{
+        padding: 60px 0;
+        .titulo{
+            text-align: center;
+            font-size: 40px;
+            line-height: 40px;
+            margin-bottom: 40px;
+            overflow: hidden;
+        }
+        .direccion{
+            float: left;
+            width: 50%;
+            text-align: left;
+            .calle{
+                margin-bottom: 15px;
+            }
+        }
+        .horarios{
+            float: right;
+            width: 50%;
+            text-align: right;
+            overflow: hidden;
+            h4{
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .entre-semana, .fin-semana{
+                width: 50%;
+                float: left;
+                text-align: center;
+            }
+        }
+    }
+    .mapa{
+        width: 100%;
+        overflow: hidden;
+        iframe{
+            width: 100%;
+            max-height: 600px;
+        }
+    }
+}
+
+//footer
+
+footer{
+    background: #000;
+    .copyright{
+        text-align: center;
+        padding: 15px 0;
+        color: #fff;
+    }
+}
+
+//Scrollbar
+::-webkit-scrollbar {
+	display: none;
+}
+
+//Media Queries
+
+@media screen and (max-width: 800px){
+    header{
+        .contenedor{
+            position: static;
+            height: auto;
+        }
+        .textos{
+            position: static;
+            margin: 100px 0;
+            .nombre{
+                font-size: 30px;
+            }
+            h3{
+                font-size: 18px;
+            }
+        }
+        .menu{
+            text-align: center;
+            a{
+                margin: 10px 20px;
+            }
+        }
+    }
+    .main{
+        .acerca-de{
+            .foto{
+                width: 100%;
+                position: relative;
+            }
+            article{
+                position: relative;
+                padding: 40px 0;
+                width: 100%;
+                top: -50px;
+                transform: translate(0px, 0);
+                margin: auto;
+                h3, p{
+                    padding: 0 40px;
+                }
+            }
+        }
+        .menu{
+            padding-top: 300px;
+            article{
+                width: 93%;
+            }
+        }
+        .galeria{
+            .foto{
+                width: 50%;
+            }
+        }
+    }
+}
+ 
+@media screen and (max-width: 400px){
+    header{
+        .menu{
+            a{
+                font-size: 12px;
+            }
+        }
+    }
+    .main{
+        .acerca-de{
+            article{
+                h3{
+                    font-size: 34px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        .menu{
+            article{
+                .nombre, .precio{
+                    font-size: 16px;
+                    line-height: 16px;
+                }
+            }
+        }
+        .ubicacion{
+            .direccion, .horarios{
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+}
