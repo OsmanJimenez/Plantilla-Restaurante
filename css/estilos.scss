@@ -108,10 +108,11 @@ header{
             margin-bottom: 40px;
         }
         .contenedor-menu, .contenedor-menu2{
-            border: 1px solid #000;
+            border: 1px solid #121212;
             background: transparent;
-            padding: 10px;
+            padding: 5px;
             overflow: hidden;
+            border-radius: 15px;
         } 
         article{
             width: 45%;
@@ -166,7 +167,6 @@ header{
         .titulo{
             text-align: center;
             font-size: 40px;
-            line-height: 40px;
             margin-bottom: 40px;
             overflow: hidden;
         }
